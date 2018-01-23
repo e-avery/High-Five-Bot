@@ -9,10 +9,10 @@ from random import randint
 
 # Create instance, identifying user agent
 reddit = praw.Reddit(client_id='',
-					 client_secret='',
-					 password='',
-					 user_agent='High-Five Bot v0.1, by u/WadeEffingWilson',
-					 username='High_Five_Bot')
+		     client_secret='',
+	             password='',
+		     user_agent='High-Five Bot v0.1, by u/WadeEffingWilson',
+		     username='High_Five_Bot')
 
 # Feedback on login status
 if reddit.user.me() == "High_Five_Bot":
