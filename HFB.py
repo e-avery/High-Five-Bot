@@ -9,10 +9,10 @@ from random import randint
 
 # Create instance, identifying user agent
 reddit = praw.Reddit(client_id='',
-					 client_secret='',
-					 password='',
-					 user_agent='High-Five Bot v0.1, by u/WadeEffingWilson',
-					 username='High_Five_Bot')
+		     client_secret='',
+	             password='',
+		     user_agent='High-Five Bot v0.1, by u/WadeEffingWilson',
+		     username='High_Five_Bot')
 
 # Feedback on login status
 if reddit.user.me() == "High_Five_Bot":
@@ -39,6 +39,7 @@ def crawl():
 			comment.reply("[" + reply + "](" + hf_gifs[randint(0,2)] + ")" + botstat)
 			
 # Add conditional __main__ statement before here
+<<<<<<< HEAD
 if __name__ == '__main__':
 	while True:
 		try:
@@ -48,3 +49,13 @@ if __name__ == '__main__':
 			print("There was an issue.")
 			time.sleep(5)
 			continue
+=======
+while True:
+	try:
+		print("Starting...")
+		crawl()
+	except Exception as e:
+		print("There was an issue.")
+		time.sleep(5)
+		continue
+>>>>>>> 1c4e86a44e6b651835c87f29219e2e3b94b903de
