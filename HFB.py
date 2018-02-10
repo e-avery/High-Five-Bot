@@ -39,11 +39,12 @@ def crawl():
 			comment.reply("[" + reply + "](" + hf_gifs[randint(0,2)] + ")" + botstat)
 			
 # Add conditional __main__ statement before here
-while True:
-	try:
-		print("Starting...")
-		crawl()
-	except Exception as e:
-		print("There was an issue.")
-		time.sleep(5)
-		continue
+if __name__ == '__main__':
+	while True:
+		try:
+			print("Starting...")
+			crawl()
+		except Exception as e:
+			print("There was an issue.")
+			time.sleep(5)
+			continue
