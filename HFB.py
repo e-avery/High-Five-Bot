@@ -2,8 +2,6 @@
 # Written in PRAW (Python Reddit API Wrapper)
 # Python v3.6
 
-
-
 import os
 import time
 import praw
@@ -32,8 +30,7 @@ hf_gifs = ["https://i.imgur.com/NAkvu0L.gifv", "https://i.imgur.com/TITkVpi.gifv
 # String attachment for ID
 botstat = ("""
 *****
-^("I am a good bot. When I'm called with )!high-five^( or )!highfive,^( I return a sweet high-five GIF. Call me up if you ever need to high-five someone.")
-""")
+"^(I am a good bot. When I'm called with )!high-five^( or )!highfive,^( I return a sweet high-five GIF. Call me up if you ever need to high-five someone.)""")
 
 # Check to see if already responded
 def resp_check(var):
