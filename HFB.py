@@ -44,7 +44,7 @@ def resp_check(var):
 	return f
 
 def crawl():
-	print("Searching...crawling...looking...")
+	print("Searching...")
 	for comment in subreddit.stream.comments():
 		if ((comment.body.lower() == "!highfive") or (comment.body.lower() == "!high-five")) and (comment.author.name != 'High_Five_Bot') and (resp_check(comment) == 0):
 			# reply to parent comment where the second argument is the UL for the array index
