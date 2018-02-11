@@ -1,7 +1,7 @@
 # High-Five-Bot
 
 Reddit bot written with the use of PRAW as a means to improve my abilities in Python as a developer.
-
+  
 
 
 **Usage:**
