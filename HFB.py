@@ -51,8 +51,7 @@ def crawl():
 			comment.reply("[" + reply + "](" + hf_gifs[randint(0,2)] + ")" + botstat)
 			with open(os.environ['USERPROFILE']+'/Documents/GitHub/HFBot/IDs.txt', 'a') as file:
 				file.write(str(comment) + "\n")
-			print("Found a call.")
-			
+			print("Found a call.")		
 
 while True:
 	try:
@@ -70,3 +69,5 @@ while True:
 		# Remove this part once Karma is built up and rate limit is gone/diminished
 		time.sleep(600)
 		continue
+
+# This comment doesn't do anything but for some reason the code breaks if I remove--keep for now
