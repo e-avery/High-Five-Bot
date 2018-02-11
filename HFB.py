@@ -17,9 +17,8 @@ reddit = praw.Reddit(client_id='',
 
 # Feedback on login status
 if reddit.user.me() == "High_Five_Bot":
-	print("I am High_Five_Bot. Logged in and ready to go.")
+	print("Logged in and ready to go.")
 
-# set up for r/bottesting--change to r/all after completion
 subreddit = reddit.subreddit('all')
 
 # Array of high five GIFs
