@@ -56,7 +56,7 @@ def crawl():
 
 while True:
 	try:
-		print("Starting my main method.")
+		print("Firing main cannon.")
 		crawl()
 	except Exception as e:
 		with open(os.environ['USERPROFILE']+'/Documents/GitHub/HFBot/BotErrors.txt', 'a') as file:
