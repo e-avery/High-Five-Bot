@@ -48,7 +48,7 @@ def crawl():
 		if ((comment.body.lower() == "!highfive") or (comment.body.lower() == "!high-five")) and (comment.author.name != 'High_Five_Bot') and (resp_check(comment) == 0):
 			# reply to parent comment where the second argument is the UL for the array index
 			reply = "%s high-fived %s" % (comment.author, comment.parent().author)
-			comment.reply("[" + reply + "](" + hf_gifs[randint(0,2)] + ")" + botstat)
+			comment.reply("[" + reply + "](" + hf_gifs[randint(0,9)] + ")" + botstat)
 			with open(environ['USERPROFILE']+'/Documents/GitHub/HFBot/IDs.txt', 'a') as file:
 				file.write(str(comment) + "\n")
 			print("Found a call.")		
