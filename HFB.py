@@ -2,9 +2,9 @@
 # Written in PRAW (Python Reddit API Wrapper)
 # Python v3.6
 
-import os
 import time
 import praw
+from os import environ
 from datetime import datetime
 from random import randint
 
@@ -34,7 +34,7 @@ botstat = ("""
 
 # Check to see if already responded
 def resp_check(var):
-	with open(os.environ['USERPROFILE']+'/Documents/GitHub/HFBot/IDs.txt') as nfile:
+	with open(environ['USERPROFILE']+'/Documents/GitHub/HFBot/IDs.txt') as nfile:
 		for lines in nfile.readlines():
 			if str(var) in lines:
 				return 1
@@ -49,7 +49,7 @@ def crawl():
 			# reply to parent comment where the second argument is the UL for the array index
 			reply = "%s high-fived %s" % (comment.author, comment.parent().author)
 			comment.reply("[" + reply + "](" + hf_gifs[randint(0,2)] + ")" + botstat)
-			with open(os.environ['USERPROFILE']+'/Documents/GitHub/HFBot/IDs.txt', 'a') as file:
+			with open(environ['USERPROFILE']+'/Documents/GitHub/HFBot/IDs.txt', 'a') as file:
 				file.write(str(comment) + "\n")
 			print("Found a call.")		
 
@@ -58,7 +58,7 @@ while True:
 		print("Firing main cannon.")
 		crawl()
 	except Exception as e:
-		with open(os.environ['USERPROFILE']+'/Documents/GitHub/HFBot/BotErrors.txt', 'a') as file:
+		with open(environ['USERPROFILE']+'/Documents/GitHub/HFBot/BotErrors.txt', 'a') as file:
 			file.write(str(datetime.now()) + " - " + str(e) + "\n")
 		print("Meh, got an error.")
 		continue
