@@ -23,8 +23,8 @@ subreddit = reddit.subreddit('all')
 
 # Array of high five GIFs
 hf_gifs = ["https://i.imgur.com/NAkvu0L.gifv", "https://i.imgur.com/TITkVpi.gifv", "https://i.imgur.com/SsZJSyy.gifv", "https://i.imgur.com/W3LGywp.gifv", 
-"https://i.imgur.com/TX2oxf3.gifv", "https://i.imgur.com/JpDHdLd.gifv", "https://i.imgur.com/lGpQ0ak.gifv",
- "https://i.imgur.com/P70igZx.gifv", "https://i.imgur.com/XiDPAlW.gifv", "https://i.imgur.com/PXA8cVT.gifv"]
+	   "https://i.imgur.com/TX2oxf3.gifv", "https://i.imgur.com/JpDHdLd.gifv", "https://i.imgur.com/lGpQ0ak.gifv", "https://i.imgur.com/P70igZx.gifv", 
+	   "https://i.imgur.com/XiDPAlW.gifv", "https://i.imgur.com/PXA8cVT.gifv"]
 
 # String attachment for ID
 botstat = ("""
