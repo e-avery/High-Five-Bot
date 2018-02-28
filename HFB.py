@@ -1,4 +1,4 @@
-# High_Five_Bot v1.0.0
+# High_Five_Bot v1.1.0
 # Written in PRAW (Python Reddit API Wrapper)
 # Python v3.6
 
@@ -51,23 +51,21 @@ def crawl():
 			comment.reply("[" + reply + "](" + hf_gifs[randint(0,9)] + ")" + botstat)
 			with open(environ['USERPROFILE']+'/Documents/GitHub/HFBot/IDs.txt', 'a') as file:
 				file.write(str(comment) + "\n")
-			print("Found a call.")		
+			print("Found a call.")
 
 while True:
 	try:
 		print("Firing main cannon.")
 		crawl()
+	except praw.exceptions.APIException as e:
+		if e.error_type == 'RATELIMIT'
+			print(str(datetime.now()) + " - " + "Going to sleep. See you in 10.")
+			time.sleep(600)
+		continue
 	except Exception as e:
 		with open(environ['USERPROFILE']+'/Documents/GitHub/HFBot/BotErrors.txt', 'a') as file:
 			file.write(str(datetime.now()) + " - " + str(e) + "\n")
 		print("Meh, got an error.")
-		continue
-	except praw.exceptions.APIException as e:
-		print(e)
-		if e.error_type == "RATELIMIT":
-			print("Haven't quit, just sleeping on the job.")
-		# Remove this part once Karma is built up and rate limit is gone/diminished
-		time.sleep(600)
 		continue
 
 # This comment doesn't do anything but for some reason the code breaks if I remove--keep for now
