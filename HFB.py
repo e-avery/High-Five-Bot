@@ -1,4 +1,4 @@
-# High_Five_Bot v1.1.0
+# High_Five_Bot v1.1.1
 # Written in PRAW (Python Reddit API Wrapper)
 # Python v3.6
 
@@ -61,6 +61,9 @@ while True:
 		if e.error_type == 'RATELIMIT'
 			print(str(datetime.now()) + " - " + "Going to sleep. See you in 10.")
 			time.sleep(600)
+		with open(environ['USERPROFILE']+'/Documents/GitHub/HFBot/BotErrors.txt', 'a') as file:
+			file.write(str(datetime.now()) + " - " + str(e) + "\n")
+			print("Meh, got an error.")
 		continue
 	except Exception as e:
 		with open(environ['USERPROFILE']+'/Documents/GitHub/HFBot/BotErrors.txt', 'a') as file:
